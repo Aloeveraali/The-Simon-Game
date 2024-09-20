@@ -1,0 +1,233 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P|Righteous);
+
+
+html, body {
+    font-family: Orbitron;
+    padding: 0;
+    margin: 0;
+    background-color: #aaaaaa;
+    height: 100vh;
+
+}
+/* Center the game container only */
+.game-container-centerer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+.game-heading {
+    font-family: Orbitron;
+    text-align: center;
+    color: #000000;
+    background-color: aaaaaa;
+    font-size:60px;
+    padding: 20px;
+    width: 100%; /* Ensures it stretches across if needed */
+   
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* This centers the items horizontally */
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* This aligns the content to the top */
+}
+
+
+
+#messageArea {
+    color: white; /* Choose a color that stands out against your background */
+    background-color: black; /* Background to make text readable */
+    padding: 10px;
+    position: absolute; /* Adjust as needed */
+    top: 10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Ensure it's on top */
+    display: none; /* Initially hidden, shown via JS */
+}
+
+
+.start-signal {
+    width: 15px; 
+    height: 15px; 
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 40px; /* Position it where you want it */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Align it properly if using left*/
+    z-index: 10; /*not behind other elements */
+}
+
+
+.start-signal.active {
+    background-color: green; /* Change to green when active */
+    animation: startSignalFlash 2s infinite; /* Flash to indicate the game is about to start */
+}
+
+@keyframes startSignalFlash {
+    0%, 100% { background-color: green; }
+    50% { background-color: darkgreen; } /* Temporary color change for visibility */
+}
+
+.start-signal.active {
+    display: block; /* Show the dot when active */
+    animation: startSignalFlash 1s infinite; /* Flash every second indefinitely */
+}
+.color-button:active, .color-button.active {
+    /* Style to indicate the button is active/flashing */
+    box-shadow: inset 0 4 10px rgba(0, 0, 0, 0.5); /* gives a "pressed" effect */
+    background: darken(the current background color, 10%);
+}
+.color-button {
+    
+    transform-origin: center; /* This ensures the scaling happens from the center */
+}
+
+
+
+.button {
+    position: absolute;
+    border: none;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 50px;
+}
+
+.button button {
+    color: rgb(0, 0, 0);
+    font-family: Orbitron;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+
+.score-display {
+    font-family: Orbitron;
+    position: absolute;
+    z-index: 100;
+    font-size: 11px;
+    padding: 5px 10px;
+    background-color: #ededed;
+}
+
+#lastScore {
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+#highScore {
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+#gameStatus {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.color-button.active {
+    /* Style to indicate the button is active/flashing */
+    opacity: 0.6;
+  }
+
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  .color-button.active {
+    animation: flash 0.5s;
+  }
+
+#circle {
+    background: rgb(4, 4, 4);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+.black-circle {
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 200px; /* Slightly larger than the colored buttons */
+    height: 200px; /* Slightly larger than the colored buttons */
+    position: absolute;
+    z-index: 1; /* Below the colored buttons */
+}
+
+
+#red-back { top: 5%; left: 15%; transform: translate(-50%, -50%); }
+#green-back { top: 5%; right: 15%; transform: translate(50%, -50%); }
+#yellow-back { bottom: 15%; left: 12%; transform: translate(-50%, 50%); }
+#blue-back { bottom: 15%; right: 12%; transform: translate(50%, 50%); }
+
+.color-button {
+    border-radius: 50%;
+    width: 170px; /* Size of the colored button */
+    height: 170px; /* Size of the colored button */
+    position: absolute;
+    z-index: 2; /* Above the black background circles */
+}
+
+/* Specific positioning for each color button */
+.red 
+{ 
+    background: rgb(229, 0, 0); 
+    top: 5%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+ }
+
+.green 
+{
+    background: rgb(31, 207, 0); 
+    top: 5%;
+    right: 15%;
+    transform: translate(50%, -50%);
+ }
+
+.yellow
+ { 
+    background: rgb(238, 255, 81);
+    bottom: 15%;
+    left: 12%; 
+    transform: translate(-50%, 50%);
+     }
+    
+.blue 
+{
+    background: rgb(45, 30, 253); 
+    bottom: 15%; 
+    right: 12%; 
+    transform: translate(50%, 50%);
+ }

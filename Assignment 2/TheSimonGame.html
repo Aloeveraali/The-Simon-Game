@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="path/to/your/styles.css">
+
+</head>
+<body>
+    <div class="game-heading">THE SIMON MEMORY GAME</div>
+    <div class="game-container-centerer">
+    <div class="container">
+    
+        <div id="circle">
+            <div id="messageArea"></div>
+            <div id="gameStatus">
+                <div id="startSignal" class="start-signal"></div>
+            </div>
+                         
+            <div class="button"><button>START</button></div>
+            <div id="lastScore" class="score-display">0</div>
+            <div id="highScore" class="score-display">0</div>
+        </div>
+
+        <!-- Black background circles -->
+        <div id="red-back" class="black-circle"></div>
+        <div id="green-back" class="black-circle"></div>
+        <div id="yellow-back" class="black-circle"></div>
+        <div id="blue-back" class="black-circle"></div>
+
+        <!-- Colored buttons -->
+        <div id="red" class="color-button red"></div>
+        <div id="green" class="color-button green"></div>
+        <div id="yellow" class="color-button yellow"></div>
+        <div id="blue" class="color-button blue"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
