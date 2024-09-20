@@ -5,9 +5,14 @@ This project is a web-based version of the classic Simon Memory Game. The game f
 challenging as the sequence gets longer and faster. This project was created using HTML, CSS, and JavaScript
 
 # How to Play
-Press the START button to begin.
-Wait 3 seconds for the first signal.
-Click the buttons in the same order they flash.
-Continue as long as you can repeat the sequence correctly. The speed increases at specific intervals.
-If you fail, all buttons will flash, and the game ends.
-Your score and high score are displayed on the screen.
+1.Press the START button to begin.
+
+2.Wait 3 seconds for the first signal.
+
+3.Click the buttons in the same order they flash.
+
+4.Continue as long as you can repeat the sequence correctly. The speed increases at specific intervals.
+ 
+5.If you fail, all buttons will flash, and the game ends.
+
+6.Your score and high score are displayed on the screen.
